@@ -1,0 +1,273 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Angaha Sagade Beauty Parlour{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="page-title">Contact Us</h1>
+                <p class="page-subtitle">Get in touch to book your appointment or ask any questions</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="contact-form-container">
+                    <h3 class="form-title">Service Inquiry Form</h3>
+                    <p class="form-subtitle">Fill out the form below and we'll get back to you as soon as possible</p>
+                    
+                    <form method="POST" class="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-3 mt-3">
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="service" class="form-label">Service Interested In</label>
+                                <select class="form-control" id="service" name="service">
+                                    <option value="">Select a service</option>
+                                    <option value="bridal-makeup">Bridal Makeup</option>
+                                    <option value="party-makeup">Party Makeup</option>
+                                    <option value="nail-art">Nail Art & Manicure</option>
+                                    <option value="facial-treatment">Facial Treatment</option>
+                                    <option value="hair-styling">Hair Styling</option>
+                                    <option value="package-deal">Complete Package</option>
+                                    <option value="consultation">Consultation Only</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Please describe your requirements, preferred date/time, or any questions you have..." required></textarea>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>Send Inquiry
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+                <div class="contact-info-container">
+                    <h3 class="info-title">Get In Touch</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Phone</h5>
+                            <p><a href="tel:7350190589">7350190589</a></p>
+                            <small>Call or WhatsApp for instant booking</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Email</h5>
+                            <p><a href="mailto:angaha@beautypalour.com">angaha@beautypalour.com</a></p>
+                            <small>Send us your inquiries anytime</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Location</h5>
+                            <p>Beauty Street<br>Your City, State</p>
+                            <small>Visit us for in-person consultation</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Working Hours</h5>
+                            <p>Monday - Saturday<br>9:00 AM - 7:00 PM</p>
+                            <small>Sunday: By appointment only</small>
+                        </div>
+                    </div>
+                    
+                    <div class="social-contact mt-4">
+                        <h5>Follow Us</h5>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="https://wa.me/917350190589" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Contact Options -->
+<section class="quick-contact py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h3 class="section-title">Quick Contact Options</h3>
+                <p class="section-subtitle">Choose the fastest way to reach us</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="quick-contact-card">
+                    <div class="quick-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h5>WhatsApp</h5>
+                    <p>Get instant response and share photos for consultation</p>
+                    <a href="https://wa.me/917350190589" class="btn btn-success" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>Chat Now
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="quick-contact-card">
+                    <div class="quick-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h5>Direct Call</h5>
+                    <p>Speak directly with Angaha for immediate assistance</p>
+                    <a href="tel:7350190589" class="btn btn-primary">
+                        <i class="fas fa-phone me-2"></i>Call Now
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="quick-contact-card">
+                    <div class="quick-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h5>Schedule Visit</h5>
+                    <p>Book an in-person consultation at our salon</p>
+                    <a href="#" class="btn btn-outline-primary" onclick="document.getElementById('message').focus();">
+                        <i class="fas fa-calendar me-2"></i>Book Visit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h3 class="section-title">Frequently Asked Questions</h3>
+                <p class="section-subtitle">Quick answers to common questions</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                How far in advance should I book for bridal makeup?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                For bridal makeup, we recommend booking at least 2-3 weeks in advance to ensure availability on your special day. We also offer trial sessions before the actual event.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Do you provide home services?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we offer home services for bridal makeup and special occasions. Additional travel charges may apply depending on the location.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                What products do you use?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We use high-quality, professional makeup brands and products that are safe for all skin types. We can also accommodate specific product requests if you have allergies or preferences.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                How long does a typical makeup session take?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                A regular makeup session takes about 45-60 minutes, while bridal makeup can take 1.5-2 hours including hair styling. Nail art sessions vary from 30 minutes to 2 hours depending on the design complexity.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                Do you offer package deals?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we offer various package deals combining makeup, nail art, and other beauty services. Contact us to discuss customized packages for your needs and budget.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

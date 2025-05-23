@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block title %}Portfolio - Angaha Sagade Beauty Parlour{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="page-title">Our Portfolio</h1>
+                <p class="page-subtitle">Showcasing our beautiful transformations and artistic creations</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Filter -->
+<section class="portfolio-filter py-3 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Work</button>
+                    <button class="filter-btn" data-filter="makeup">Makeup</button>
+                    <button class="filter-btn" data-filter="nails">Nail Art</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Gallery -->
+<section class="portfolio-gallery py-5">
+    <div class="container">
+        <div class="row g-4" id="portfolioGrid">
+            {% for item in portfolio_items %}
+            <div class="col-lg-4 col-md-6 portfolio-item-wrapper" data-category="{{ item.category }}">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="{{ item.image }}" alt="{{ item.title }}" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h5>{{ item.title }}</h5>
+                                <p>{{ item.category|title }}</p>
+                                <button class="btn btn-light btn-sm" onclick="openLightbox('{{ item.image }}', '{{ item.title }}')">
+                                    <i class="fas fa-expand-alt"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+            <!-- Additional makeup showcase items -->
+            <div class="col-lg-4 col-md-6 portfolio-item-wrapper" data-category="makeup">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://pixabay.com/get/g944b087dbed47f914d1424b84400ba6ca0243098a69edeca9d0ea3951c1cc65bbf8edcb23986b8feae01294883a26df685189b605660c8be6ab218214902e94d_1280.jpg" alt="Professional Makeup" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h5>Professional Shoot</h5>
+                                <p>Makeup</p>
+                                <button class="btn btn-light btn-sm" onclick="openLightbox('https://pixabay.com/get/g944b087dbed47f914d1424b84400ba6ca0243098a69edeca9d0ea3951c1cc65bbf8edcb23986b8feae01294883a26df685189b605660c8be6ab218214902e94d_1280.jpg', 'Professional Shoot')">
+                                    <i class="fas fa-expand-alt"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 portfolio-item-wrapper" data-category="makeup">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://pixabay.com/get/g3dc8f5fee9610602cde9133457636027aa3189612069f01c9fb0e8ada569bd2a44e43ae552e8511e4d4d1b06502cb82856566843912eea665ddf485ba7ea4c1a_1280.jpg" alt="Glamour Look" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h5>Glamour Look</h5>
+                                <p>Makeup</p>
+                                <button class="btn btn-light btn-sm" onclick="openLightbox('https://pixabay.com/get/g3dc8f5fee9610602cde9133457636027aa3189612069f01c9fb0e8ada569bd2a44e43ae552e8511e4d4d1b06502cb82856566843912eea665ddf485ba7ea4c1a_1280.jpg', 'Glamour Look')">
+                                    <i class="fas fa-expand-alt"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 portfolio-item-wrapper" data-category="makeup">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://pixabay.com/get/g14b398853f785cd73c552adc94cac046f71e2f3e14fba3d060dd4d7ddc2a84ba8830760e576d41cdc94998988ffa3370c74876b821fa41d14cb2e7e12b565f85_1280.jpg" alt="Artistic Portrait" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h5>Artistic Portrait</h5>
+                                <p>Makeup</p>
+                                <button class="btn btn-light btn-sm" onclick="openLightbox('https://pixabay.com/get/g14b398853f785cd73c552adc94cac046f71e2f3e14fba3d060dd4d7ddc2a84ba8830760e576d41cdc94998988ffa3370c74876b821fa41d14cb2e7e12b565f85_1280.jpg', 'Artistic Portrait')">
+                                    <i class="fas fa-expand-alt"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional nail art items -->
+            <div class="col-lg-4 col-md-6 portfolio-item-wrapper" data-category="nails">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://pixabay.com/get/g3a1b3962897b3d94e7d90448edfafcbf497d150e393a1051b548875633adc39a317b1e3da2b9da94f974026c4e32f76cf3290ce765e1681ac60664b35070d403_1280.jpg" alt="Elegant Nails" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h5>Elegant Design</h5>
+                                <p>Nail Art</p>
+                                <button class="btn btn-light btn-sm" onclick="openLightbox('https://pixabay.com/get/g3a1b3962897b3d94e7d90448edfafcbf497d150e393a1051b548875633adc39a317b1e3da2b9da94f974026c4e32f76cf3290ce765e1681ac60664b35070d403_1280.jpg', 'Elegant Design')">
+                                    <i class="fas fa-expand-alt"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 portfolio-item-wrapper" data-category="nails">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://pixabay.com/get/g480e213f9355f56467f6cd7b1b0965cb968bea7ddafc6b12ed93c9fdb9848646774f7f32d405ab7ee21bcaa41769f2a92db7f47bb7e61efa08ba1de2d50232e4_1280.jpg" alt="Creative Nails" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h5>Creative Art</h5>
+                                <p>Nail Art</p>
+                                <button class="btn btn-light btn-sm" onclick="openLightbox('https://pixabay.com/get/g480e213f9355f56467f6cd7b1b0965cb968bea7ddafc6b12ed93c9fdb9848646774f7f32d405ab7ee21bcaa41769f2a92db7f47bb7e61efa08ba1de2d50232e4_1280.jpg', 'Creative Art')">
+                                    <i class="fas fa-expand-alt"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 portfolio-item-wrapper" data-category="nails">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://pixabay.com/get/gad36b460dedeb45f55be50677e0608a893d02a3f8e46ff7176e869f38ec9cdf6ebabe3960b284f5fa7f140a364b724b0c74b41638b871b9b24a4b278d905456b_1280.jpg" alt="Stylish Nails" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h5>Stylish Finish</h5>
+                                <p>Nail Art</p>
+                                <button class="btn btn-light btn-sm" onclick="openLightbox('https://pixabay.com/get/gad36b460dedeb45f55be50677e0608a893d02a3f8e46ff7176e869f38ec9cdf6ebabe3960b284f5fa7f140a364b724b0c74b41638b871b9b24a4b278d905456b_1280.jpg', 'Stylish Finish')">
+                                    <i class="fas fa-expand-alt"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div class="modal fade" id="lightboxModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="lightboxTitle"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center p-0">
+                <img id="lightboxImage" src="" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio Stats -->
+<section class="portfolio-stats py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 text-center mb-4">
+                <div class="stat-item">
+                    <h3 class="stat-number">500+</h3>
+                    <p class="stat-label">Happy Clients</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center mb-4">
+                <div class="stat-item">
+                    <h3 class="stat-number">1000+</h3>
+                    <p class="stat-label">Makeup Sessions</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center mb-4">
+                <div class="stat-item">
+                    <h3 class="stat-number">800+</h3>
+                    <p class="stat-label">Nail Art Designs</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center mb-4">
+                <div class="stat-item">
+                    <h3 class="stat-number">3+</h3>
+                    <p class="stat-label">Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="cta-title">Inspired by Our Work?</h2>
+                <p class="cta-subtitle">Book your appointment and let us create something beautiful for you</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Book Your Session</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+function openLightbox(imageSrc, title) {
+    document.getElementById('lightboxImage').src = imageSrc;
+    document.getElementById('lightboxTitle').textContent = title;
+    const modal = new bootstrap.Modal(document.getElementById('lightboxModal'));
+    modal.show();
+}
+</script>
+{% endblock %}

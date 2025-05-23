@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Angaha Sagade Beauty Parlour{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="container">
+            <div class="row justify-content-center align-items-center min-vh-100">
+                <div class="col-12">
+                    <div class="hero-center-wrapper">
+                        <div class="hero-main-content text-center">
+                            <h1 class="hero-title">
+                                <span class="title-main">Angaha Sagade</span>
+                                <span class="title-sub">Beauty Parlour</span>
+                            </h1>
+                            <p class="hero-description">
+                                Transform your beauty with our professional makeup artistry, stunning nail art, and rejuvenating beauty treatments. Where elegance meets expertise.
+                            </p>
+                            <div class="hero-buttons">
+                                <a href="{{ url_for('services') }}" class="btn btn-primary btn-lg me-3">Our Services</a>
+                                <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Book Appointment</a>
+                            </div>
+                        </div>
+                        <div class="hero-image-wrapper">
+                            <div class="hero-image">
+                                <img src="https://pixabay.com/get/gbde627d5e095e1015b5e0aa8794b3576c2ef0a63311b2ae6203c00122124879ae8a0fd147b21c3a8c940677cc562162229bb29c4afcca67edf4e88a2b7bd5608_1280.jpg" alt="Beauty Salon Interior" class="img-fluid rounded-3 shadow-lg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Preview Section -->
+<section class="services-preview py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title">Our Specialties</h2>
+                <p class="section-subtitle">Professional beauty services tailored for you</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h4>Makeup Artistry</h4>
+                    <p>Professional makeup for weddings, parties, and special occasions</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h4>Nail Art</h4>
+                    <p>Creative nail designs, gel manicures, and professional nail care</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h4>Facial Treatments</h4>
+                    <p>Rejuvenating facials and skincare treatments for glowing skin</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h4>Hair Styling</h4>
+                    <p>Expert hair cutting, styling, and treatment services</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="about-preview py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-image">
+                    <img src="https://pixabay.com/get/ge393c8473f81869d31fc2c32b114f9473c65dfedd3cec9729339191b980cb5e3a24a56857fa002d910f7d0e82cad5bb0e486570955c3ede37dfe616e41895f0f_1280.jpg" alt="Angaha Sagade" class="img-fluid rounded-3">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h2 class="section-title">Meet Angaha Sagade</h2>
+                    <p class="lead">A passionate makeup artist and beauty expert dedicated to enhancing your natural beauty.</p>
+                    <p>With years of experience in the beauty industry, Angaha specializes in bridal makeup, nail art, and comprehensive beauty treatments. Her artistic vision and attention to detail ensure every client leaves feeling confident and beautiful.</p>
+                    <a href="{{ url_for('about') }}" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Preview Section -->
+<section class="portfolio-preview py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title">Recent Work</h2>
+                <p class="section-subtitle">A glimpse of our beautiful transformations</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="portfolio-item">
+                    <img src="https://pixabay.com/get/ge4222f59fbb78a389f71a619e54fa8b3ad0768eb59f923c2f084fd5c955e82ea13929795871fa7c0be11ce682ee76bbb906734c1ca0803e7f8f56ff1ab95b54e_1280.jpg" alt="Makeup Work" class="img-fluid">
+                    <div class="portfolio-overlay">
+                        <h5>Evening Glam</h5>
+                        <p>Makeup</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="portfolio-item">
+                    <img src="https://pixabay.com/get/gcbc6538a81cc7d4f4f0434ede2165e0eac2ce9e6c9ef38855ff1b1223b43ae9c8ad7e856db7d79ed6f885f1d3396c233a57067034f8f8e5e7a47f99fd1818fa6_1280.jpg" alt="Nail Art" class="img-fluid">
+                    <div class="portfolio-overlay">
+                        <h5>Floral Design</h5>
+                        <p>Nail Art</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="portfolio-item">
+                    <img src="https://pixabay.com/get/gfa6240df893c64e0efe4fadbc091431b2ed82dcc4d14f23e1ddc51b121423249b3051cf5597538a89e8dd098ac0b4fcffd0d9a031467aab1fca4142760c05034_1280.jpg" alt="Natural Look" class="img-fluid">
+                    <div class="portfolio-overlay">
+                        <h5>Natural Glow</h5>
+                        <p>Makeup</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <a href="{{ url_for('portfolio') }}" class="btn btn-primary">View Full Portfolio</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials py-5 bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real reviews from satisfied customers</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Angaha did my bridal makeup and it was absolutely perfect! She understood exactly what I wanted and made me feel like a princess on my special day."</p>
+                    <div class="testimonial-author">
+                        <h6>Priya Sharma</h6>
+                        <span>Bride</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The nail art designs are incredible! Such attention to detail and creativity. I always get compliments on my nails after visiting Angaha."</p>
+                    <div class="testimonial-author">
+                        <h6>Sakshi Patel</h6>
+                        <span>Regular Client</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Professional service with a personal touch. The facial treatments left my skin glowing and refreshed. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <h6>Meera Gupta</h6>
+                        <span>Beauty Enthusiast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="cta-title">Ready to Transform Your Look?</h2>
+                <p class="cta-subtitle">Book your appointment today and experience the magic of professional beauty services</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Book Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
