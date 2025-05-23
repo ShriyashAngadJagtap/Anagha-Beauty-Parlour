@@ -1,0 +1,11 @@
+Flask
+gunicorn
+Jinja2
+Werkzeug
+itsdangerous
+click
+Flask-SQLAlchemy
+Flask-WTF
+requests
+python-dotenv
+Flask-Login
