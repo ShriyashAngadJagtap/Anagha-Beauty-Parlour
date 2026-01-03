@@ -45,25 +45,25 @@ def services():
             'name': 'Nail Art & Manicure',
             'description': 'Creative nail designs, gel manicures, and nail care treatments',
             'services': ['Gel Manicure', 'Nail Art Design', 'French Manicure', 'Nail Extensions', 'Nail Care Treatment'],
-            'image': 'https://pixabay.com/get/gcbc6538a81cc7d4f4f0434ede2165e0eac2ce9e6c9ef38855ff1b1223b43ae9c8ad7e856db7d79ed6f885f1d3396c233a57067034f8f8e5e7a47f99fd1818fa6_1280.jpg'
+            'image': 'https://media.istockphoto.com/id/1334253013/photo/close-up-manicured-womans-hands-on-pink-background.jpg?s=2048x2048&w=is&k=20&c=WXqqd-gCtae5XgZuAtcLvY2gXbfJ7sCjgxWVbQnrfNU='
         },
         {
             'name': 'Makeup Artistry',
             'description': 'Professional makeup for all occasions and events',
             'services': ['Bridal Makeup', 'Party Makeup', 'Corporate Look', 'Photo Shoot Makeup', 'Makeup Lessons'],
-            'image': 'https://pixabay.com/get/ge393c8473f81869d31fc2c32b114f9473c65dfedd3cec9729339191b980cb5e3a24a56857fa002d910f7d0e82cad5bb0e486570955c3ede37dfe616e41895f0f_1280.jpg'
+            'image': 'https://media.istockphoto.com/id/1014165094/photo/portrait-of-a-woman-with-bright-colored-flying-hair-all-shades-of-purple-hair-coloring.jpg?s=2048x2048&w=is&k=20&c=dQjErMkgUkX7NY-5WhCJCkdmD8n7C9dV_9VuXneghzg='
         },
         {
             'name': 'Facial Treatments',
             'description': 'Rejuvenating facial treatments for all skin types',
             'services': ['Deep Cleansing Facial', 'Anti-Aging Treatment', 'Hydrating Facial', 'Acne Treatment', 'Brightening Facial'],
-            'image': 'https://pixabay.com/get/gbde627d5e095e1015b5e0aa8794b3576c2ef0a63311b2ae6203c00122124879ae8a0fd147b21c3a8c940677cc562162229bb29c4afcca67edf4e88a2b7bd5608_1280.jpg'
+            'image': 'https://media.istockphoto.com/id/1255188868/photo/spa-therapist-putting-facial-mask-for-young-lady.jpg?s=2048x2048&w=is&k=20&c=QmF02de7ZAXi7Va0Y03v-r2GT6gUxSSzyJLxTs3cXSI='
         },
         {
             'name': 'Hair Styling',
             'description': 'Professional hair styling and treatments',
             'services': ['Hair Cut & Style', 'Hair Coloring', 'Hair Treatment', 'Bridal Hair', 'Hair Extensions'],
-            'image': 'https://pixabay.com/get/gd9504a0878d78ad700cd78b9e6b4e94b047bfa82d2b1084274f4533b2b3f2be4c0fce86c24b663061612d41df7e65dad9e0ae019f06d956e11d5f8e42eefac4d_1280.jpg'
+            'image': 'https://media.istockphoto.com/id/539953380/photo/girl-with-red-lipstick-and-short-hair-in-black-t-shirt.jpg?s=2048x2048&w=is&k=20&c=sKfyK8csXYbdIguASF3X2uFtFTAdoQ_XeygX1cSIFF0='
         }
     ]
     return render_template('services.html', service_categories=service_categories)
@@ -71,12 +71,12 @@ def services():
 @app.route('/portfolio')
 def portfolio():
     portfolio_items = [
-        {'category': 'makeup', 'image': 'https://pixabay.com/get/ge393c8473f81869d31fc2c32b114f9473c65dfedd3cec9729339191b980cb5e3a24a56857fa002d910f7d0e82cad5bb0e486570955c3ede37dfe616e41895f0f_1280.jpg', 'title': 'Bridal Makeup'},
-        {'category': 'makeup', 'image': 'https://pixabay.com/get/ge4222f59fbb78a389f71a619e54fa8b3ad0768eb59f923c2f084fd5c955e82ea13929795871fa7c0be11ce682ee76bbb906734c1ca0803e7f8f56ff1ab95b54e_1280.jpg', 'title': 'Evening Look'},
-        {'category': 'makeup', 'image': 'https://pixabay.com/get/gfa6240df893c64e0efe4fadbc091431b2ed82dcc4d14f23e1ddc51b121423249b3051cf5597538a89e8dd098ac0b4fcffd0d9a031467aab1fca4142760c05034_1280.jpg', 'title': 'Natural Glow'},
-        {'category': 'nails', 'image': 'https://pixabay.com/get/gcbc6538a81cc7d4f4f0434ede2165e0eac2ce9e6c9ef38855ff1b1223b43ae9c8ad7e856db7d79ed6f885f1d3396c233a57067034f8f8e5e7a47f99fd1818fa6_1280.jpg', 'title': 'Floral Nail Art'},
-        {'category': 'nails', 'image': 'https://pixabay.com/get/g0e6ad5ffd55094c17b9ffaaa3fd33aa38c419ed83dd18b8a3f9c633ae5d8527db308f7871f601ad1eb23641f949d9872856b7833119de384668bb88e3aad98dc_1280.jpg', 'title': 'French Manicure'},
-        {'category': 'nails', 'image': 'https://pixabay.com/get/g59a8fc92938a72cf023097f694b8aab35208d0a34f85134aa3bbd0d16122310d8e2bfebf2e27dc9b5461d16a0028a4b1137fd73bc1155dde05e53baada4b493f_1280.jpg', 'title': 'Geometric Design'}
+        {'category': 'makeup', 'image': 'https://media.istockphoto.com/id/1334253013/photo/close-up-manicured-womans-hands-on-pink-background.jpg?s=2048x2048&w=is&k=20&c=WXqqd-gCtae5XgZuAtcLvY2gXbfJ7sCjgxWVbQnrfNU=', 'title': 'Bridal Makeup'},
+        {'category': 'makeup', 'image': 'https://media.istockphoto.com/id/1014165094/photo/portrait-of-a-woman-with-bright-colored-flying-hair-all-shades-of-purple-hair-coloring.jpg?s=2048x2048&w=is&k=20&c=dQjErMkgUkX7NY-5WhCJCkdmD8n7C9dV_9VuXneghzg=', 'title': 'Evening Look'},
+        {'category': 'makeup', 'image': 'https://media.istockphoto.com/id/1255188868/photo/spa-therapist-putting-facial-mask-for-young-lady.jpg?s=2048x2048&w=is&k=20&c=QmF02de7ZAXi7Va0Y03v-r2GT6gUxSSzyJLxTs3cXSI=', 'title': 'Natural Glow'},
+        {'category': 'nails', 'image': 'https://https://media.istockphoto.com/id/539953380/photo/girl-with-red-lipstick-and-short-hair-in-black-t-shirt.jpg?s=2048x2048&w=is&k=20&c=sKfyK8csXYbdIguASF3X2uFtFTAdoQ_XeygX1cSIFF0=', 'title': 'Floral Nail Art'},
+        {'category': 'nails', 'image': 'https://media.istockphoto.com/id/1493895602/photo/stage-kids-cute-sweet-dreams-podium-pink-playground-rainbow-circle-float-and-circle-wall.jpg?s=2048x2048&w=is&k=20&c=ZPjduA6EW7QuZrSfsR9-aROTt8AWHnZ7mJgw-s1bC4k=', 'title': 'French Manicure'},
+        {'category': 'nails', 'image': 'https://media.istockphoto.com/id/1296431297/photo/a-beautiful-young-woman-with-long-hair-doing-makeup-for-a-wedding-or-photo-shoot.jpg?s=2048x2048&w=is&k=20&c=4vNafslyu33WucWPvZnD3_TPOZjdlENf7WQgMHkAsFs=', 'title': 'Geometric Design'}
     ]
     return render_template('portfolio.html', portfolio_items=portfolio_items)
 
